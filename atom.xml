@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-17T08:08:47.518Z</updated>
+  <updated>2019-09-17T12:09:14.497Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>微信多页分享</title>
+    <link href="http://yoursite.com/2019/09/17/webpack4/"/>
+    <id>http://yoursite.com/2019/09/17/webpack4/</id>
+    <published>2019-09-17T12:08:54.682Z</published>
+    <updated>2019-09-17T12:09:14.497Z</updated>
+    
+    <content type="html"><![CDATA[<p>记录一次微信分享活动</p><h2 id="微信多页分享踩坑记录"><a href="#微信多页分享踩坑记录" class="headerlink" title="微信多页分享踩坑记录"></a>微信多页分享踩坑记录</h2><a id="more"></a> <h3 id="w"><a href="#w" class="headerlink" title="w"></a>w</h3>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;记录一次微信分享活动&lt;/p&gt;
+&lt;h2 id=&quot;微信多页分享踩坑记录&quot;&gt;&lt;a href=&quot;#微信多页分享踩坑记录&quot; class=&quot;headerlink&quot; title=&quot;微信多页分享踩坑记录&quot;&gt;&lt;/a&gt;微信多页分享踩坑记录&lt;/h2&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>微信多页分享</title>
