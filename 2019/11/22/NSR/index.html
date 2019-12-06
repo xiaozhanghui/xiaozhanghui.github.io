@@ -97,7 +97,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/11/22/NSR/jscode.png">
 <meta property="og:image" content="http://yoursite.com/2019/11/22/NSR/three.png">
 <meta property="og:image" content="http://yoursite.com/2019/11/22/NSR/pureJSX.png">
-<meta property="og:updated_time" content="2019-12-03T08:44:56.398Z">
+<meta property="og:updated_time" content="2019-12-03T10:02:26.136Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NSR 实现 Web 端“即开”体验的秘密思考">
 <meta name="twitter:description" content="已有的渲染机制不选择weex的原因 weex 致力于使开发者能基于通用跨平台的 Web 开发语言和开发经验，来构建 Android、iOS 和 Web 应用。简单来说，在集成了 WeexSDK 之后，你可以使用 JavaScript 语言和前端开发经验来开发移动应用。ReactNative也是类似的   跨端：除了 UC 端内，正文还需要考虑第三方 APP 打开的场景，如外渠、分享等，正文页面的运">
@@ -384,8 +384,10 @@
 </ol>
 <p>超音速平台：用于发布 H5 离线包，将 UFE 工程套件生成的离线资源下发到 App 端内；<br>FEA 管理平台：这是信息流前端团队自研的前端资源发布管理平台，在这里的作用是用于不支持离线包或未命中离线包资源的线上兜底版本的模板发布，支持对资源的灰度、回滚等；</p>
 <p>区别于传统的 Web 端渲染方案，NSR 结合客户端上 JS 引擎的动态能力与 Rax 的渲染能力，在端上进行 HTML 直出渲染，有效缩短与 Web 内核交互的渲染路径，显著的加快了首屏渲染。结合端上智能决策系统，提前预判页面打开并提前预渲染，最终使页面首屏渲染体验有一个质的飞跃。 </p>
-<h3 id="基于-PureJSX-的最小化重构"><a href="#基于-PureJSX-的最小化重构" class="headerlink" title="基于 PureJSX 的最小化重构"></a>基于 PureJSX 的最小化重构</h3><p>信息流正文是一个有非常重历史包袱的项目，为了避开历史版本的兼容问题，上线的优化代码或模板是针对具备离线包能力的版本进行了切割，通过在服务端进行新旧版的模板匹配，在 UC12.0 以上版本上启用新模板，并与产品沟通后确认不再对旧版本进行新功能的迭代，只进行必要的维护。</p>
-<p>同时，在新版本的重构中，为了达到首屏的最小化依赖，我们做了以下的事情：</p>
+<h3 id="基于-PureJSX-的最小化重构"><a href="#基于-PureJSX-的最小化重构" class="headerlink" title="基于 PureJSX 的最小化重构"></a>基于 PureJSX 的最小化重构</h3><blockquote>
+<p>一个没有Vdom的，但保留最小组件周期的React实现，只有1KB<br>信息流正文是一个有非常重历史包袱的项目，为了避开历史版本的兼容问题，上线的优化代码或模板是针对具备离线包能力的版本进行了切割，通过在服务端进行新旧版的模板匹配，在 UC12.0 以上版本上启用新模板，并与产品沟通后确认不再对旧版本进行新功能的迭代，只进行必要的维护。</p>
+</blockquote>
+<p>同时，在新版本的重构中，为了达到首屏的最小化依赖：</p>
 <ol>
 <li>在逻辑上将原来的如 Vue、Zepto、Lazyload 等基础类库剥离后，新加入的 Preact 类库在异步 chunk 中才会引入，不影响首屏；</li>
 <li>在首屏的最小化模块中，其代码书写上仅使用兼容 ES5 的语法，保障首屏不再需要引入 Polyfill，而非首屏部分则不做限制；</li>
@@ -431,8 +433,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/08/vue-cli3/" rel="next" title="vue-cli3源码解读">
-                <i class="fa fa-chevron-left"></i> vue-cli3源码解读
+              <a href="/2019/09/17/webpack4/" rel="next" title="webpack4">
+                <i class="fa fa-chevron-left"></i> webpack4
               </a>
             
           </div>
@@ -440,6 +442,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/12/04/vueCli3/" rel="prev" title="vue-cli3源码解读">
+                vue-cli3源码解读 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -636,7 +642,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共8.5k字</span>
+  <span class="post-count">博客全站共8.9k字</span>
 </div>
 
         
